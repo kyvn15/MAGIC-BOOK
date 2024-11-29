@@ -6285,17 +6285,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan nama mengandung huruf "Do"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan dengan nama mengandung "Do"
+      for (var employee in employees) {
+        if (employee["name"].contains("Do")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "John Doe";
     },
 
-    // Exercise 444
+// Exercise 444
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6304,17 +6305,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan nama mengandung huruf "Sony"
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk dengan nama mengandung "Sony"
+      for (var product in products) {
+        if (product["name"].contains("Sony")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 1 &&
           matchedProducts[0]["name"] == "Headphones Sony";
     },
 
-    // Exercise 445
+// Exercise 445
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6323,17 +6325,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan nama depan mengandung huruf "Jo"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan dengan nama depan mengandung "Jo"
+      for (var employee in employees) {
+        if (employee["name"].startsWith("Jo")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "John Doe";
     },
 
-    // Exercise 446
+// Exercise 446
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6342,18 +6345,19 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan nama mengandung huruf "Logi"
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk dengan nama mengandung "Logi"
+      for (var product in products) {
+        if (product["name"].contains("Logi")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 2 &&
           matchedProducts[0]["name"] == "Keyboard Logitech" &&
           matchedProducts[1]["name"] == "Mouse Logitech";
     },
 
-    // Exercise 447
+// Exercise 447
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6362,11 +6366,12 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan nama belakang mengandung huruf "son"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan dengan nama belakang mengandung "son"
+      for (var employee in employees) {
+        if (employee["name"].endsWith("son")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "Bob Johnson";
@@ -6381,17 +6386,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan nama mengandung huruf "Sony"
-      // atau mengandung huruf "Logi"
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk dengan nama mengandung "Sony" atau "Logi"
+      for (var product in products) {
+        if (product["name"].contains("Sony") ||
+            product["name"].contains("Logi")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 3;
     },
 
-    // Exercise 449
+// Exercise 449
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6400,17 +6406,17 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan harga kurang dari 200000
-      // atau mengandung huruf "Sony" dalam nama produk
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk dengan harga < 200000 atau nama mengandung "Sony"
+      for (var product in products) {
+        if (product["price"] < 200000 || product["name"].contains("Sony")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 2;
     },
 
-    // Exercise 451
+// Exercise 451
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6419,18 +6425,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan usia lebih dari 35 tahun
-      // atau nama mengandung huruf "Smith"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan usia > 35 atau nama mengandung "Smith"
+      for (var employee in employees) {
+        if (employee["age"] > 35 || employee["name"].contains("Smith")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "Alice Smith";
     },
 
-    // Exercise 452
+// Exercise 452
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6439,18 +6445,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan harga lebih dari 300000
-      // atau nama mengandung huruf "Sony" dalam produk
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk dengan harga > 300000 atau nama mengandung "Sony"
+      for (var product in products) {
+        if (product["price"] > 300000 || product["name"].contains("Sony")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 1 &&
           matchedProducts[0]["name"] == "Headphones Sony";
     },
 
-    // Exercise 453
+// Exercise 453
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6459,19 +6465,20 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan usia di antara 25 dan 30 tahun (inklusif)
-      // atau nama depan mengandung huruf "Bob"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan usia di antara 25-30 atau nama depan "Bob"
+      for (var employee in employees) {
+        if ((employee["age"] >= 25 && employee["age"] <= 30) ||
+            employee["name"].startsWith("Bob")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 2 &&
           matchedEmployees[0]["name"] == "John Doe" &&
           matchedEmployees[1]["name"] == "Bob Johnson";
     },
 
-    // Exercise 454
+// Exercise 454
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6480,18 +6487,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan harga kurang dari 200000
-      // dan nama produk mengandung huruf "og"
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk harga < 200000 dan nama mengandung "og"
+      for (var product in products) {
+        if (product["price"] < 200000 && product["name"].contains("og")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 1 &&
           matchedProducts[0]["name"] == "Mouse Logitech";
     },
 
-    // Exercise 455
+// Exercise 455
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6500,18 +6507,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan usia kurang dari 30 tahun
-      // dan nama belakang mengandung huruf "son"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan usia < 30 dan nama belakang mengandung "son"
+      for (var employee in employees) {
+        if (employee["age"] < 30 && employee["name"].endsWith("son")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "Bob Johnson";
     },
 
-    // Exercise 456
+// Exercise 456
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 36},
@@ -6520,17 +6527,17 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan usia lebih dari 35 tahun
-      // dan nama mengandung huruf "Smith"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan usia > 35 dan nama mengandung "Smith"
+      for (var employee in employees) {
+        if (employee["age"] > 35 && employee["name"].contains("Smith")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.isNotEmpty && matchedEmployees.first["id"] == 2;
     },
 
-    // Exercise 457
+// Exercise 457
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6539,18 +6546,18 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan harga lebih dari 300000
-      // dan nama mengandung huruf "Sony" dalam produk
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk harga > 300000 dan nama mengandung "Sony"
+      for (var product in products) {
+        if (product["price"] > 300000 && product["name"].contains("Sony")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 1 &&
           matchedProducts[0]["name"] == "Headphones Sony";
     },
 
-    // Exercise 458
+// Exercise 458
     () {
       List<Map<String, dynamic>> employees = [
         {"id": 1, "name": "John Doe", "age": 28},
@@ -6559,18 +6566,19 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedEmployees = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari karyawan dengan usia di antara 25 dan 30 tahun (inklusif)
-      // dan nama depan mengandung huruf "Bob"
-      // Kemudian masukkan data karyawan tersebut ke dalam list matchedEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari karyawan usia di antara 25-30 dan nama depan "Bob"
+      for (var employee in employees) {
+        if ((employee["age"] >= 25 && employee["age"] <= 30) &&
+            employee["name"].startsWith("Bob")) {
+          matchedEmployees.add(employee);
+        }
+      }
 
       return matchedEmployees.length == 1 &&
           matchedEmployees[0]["name"] == "Bob Johnson";
     },
 
-    // Exercise 459
+// Exercise 459
     () {
       List<Map<String, dynamic>> products = [
         {"id": 1, "name": "Keyboard Logitech", "price": 250000},
@@ -6579,33 +6587,37 @@ class TechnicalTest {
       ];
       List<Map<String, dynamic>> matchedProducts = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari produk dengan harga kurang dari 200000
-      // dan nama produk mengandung huruf "og"
-      // Kemudian masukkan data produk tersebut ke dalam list matchedProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      // Looping for mencari produk harga < 200000 dan nama mengandung "og"
+      for (var product in products) {
+        if (product["price"] < 200000 && product["name"].contains("og")) {
+          matchedProducts.add(product);
+        }
+      }
 
       return matchedProducts.length == 1 &&
           matchedProducts[0]["name"] == "Mouse Logitech";
     },
 
-    // Exercise 460
+// Exercise 460
     () {
       List<Map<String, dynamic>> orders = [
         {"id": 1, "product": "Phone", "quantity": 2, "total": 1000},
         {"id": 2, "product": "Laptop", "quantity": 1, "total": 1200},
         {"id": 3, "product": "Headphones", "quantity": 3, "total": 150},
-        {"id": 4, "product": "TV", "quantity": 1, "total": 800},
+        {"id": 4, "product": "Tablet", "quantity": 1, "total": 600},
       ];
-      int index = -1;
+      List<Map<String, dynamic>> matchedOrders = [];
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari order dengan id 3 dalam list orders
-      // >>> Tulis kode for loop di sini
+      // Looping for mencari pesanan quantity > 2 atau total > 1000
+      for (var order in orders) {
+        if (order["quantity"] > 2 || order["total"] > 1000) {
+          matchedOrders.add(order);
+        }
+      }
 
-      // --- End of Answer ---
-
-      return index == 2;
+      return matchedOrders.length == 2 &&
+          matchedOrders[0]["id"] == 2 &&
+          matchedOrders[1]["id"] == 3;
     },
 
     // Exercise 461
@@ -6618,10 +6630,13 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari employee dengan name "Eva" dan salary lebih dari 6000 dalam list employees
-      // >>> Tulis kode for loop di sini
+      for (int i = 0; i < employees.length; i++) {
+        if (employees[i]["name"] == "Eva" && employees[i]["salary"] > 6000) {
+          index = i;
+          break;
+        }
+      }
 
-      // --- End of Answer ---
       return index == 3;
     },
 
@@ -6636,10 +6651,13 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari transaction dengan id 5 dan type "Purchase" dalam list transactions
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < transactions.length; i++) {
+        if (transactions[i]["id"] == 5 &&
+            transactions[i]["type"] == "Purchase") {
+          index = i;
+          break;
+        }
+      }
 
       return index == 4;
     },
@@ -6654,10 +6672,12 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari product dengan id 2 dan price 1200 dalam list products
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < products.length; i++) {
+        if (products[i]["id"] == 2 && products[i]["price"] == 1200) {
+          index = i;
+          break;
+        }
+      }
 
       return index == 1;
     },
@@ -6672,10 +6692,12 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari employee dengan name "Bob" dan age lebih dari 30 dalam list employees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < employees.length; i++) {
+        if (employees[i]["name"] == "Bob" && employees[i]["age"] > 30) {
+          index = i;
+          break;
+        }
+      }
 
       return index == 2;
     },
@@ -6691,10 +6713,13 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari transaction dengan type "Refund" dan status "Pending" dalam list transactions
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < transactions.length; i++) {
+        if (transactions[i]["type"] == "Refund" &&
+            transactions[i]["status"] == "Pending") {
+          index = i;
+          break;
+        }
+      }
 
       return index == 2;
     },
@@ -6709,10 +6734,13 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari product dengan name "Headphones" dan stock lebih dari 15 dalam list products
-      // >>> Tulis kode for loop di sini
+      for (int i = 0; i < products.length; i++) {
+        if (products[i]["name"] == "Headphones" && products[i]["stock"] > 15) {
+          index = i;
+          break;
+        }
+      }
 
-      // --- End of Answer ---
       return index == 2;
     },
 
@@ -6726,10 +6754,14 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari employee dengan name "John", age 30, dan department "Sales" dalam list employees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < employees.length; i++) {
+        if (employees[i]["name"] == "John" &&
+            employees[i]["age"] == 30 &&
+            employees[i]["department"] == "Sales") {
+          index = i;
+          break;
+        }
+      }
 
       return index == 0;
     },
@@ -6745,10 +6777,13 @@ class TechnicalTest {
       ];
       int index = -1;
 
-      // ? Instruksi: Gunakan looping for untuk mencari index dari transaction dengan amount 75 dan status "Completed" dalam list transactions
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (int i = 0; i < transactions.length; i++) {
+        if (transactions[i]["amount"] == 75 &&
+            transactions[i]["status"] == "Completed") {
+          index = i;
+          break;
+        }
+      }
 
       return index == 3;
     },
@@ -6810,9 +6845,16 @@ class TechnicalTest {
       // Instruksi: Gunakan looping for untuk mencari user yang berlangganan (isSubscribed = true), telah diverifikasi (isVerified = true),
       // memiliki gender "Female", berusia di atas 25 tahun, dan tinggal di kota "Los Angeles" atau "New York"
       // Masukkan user yang memenuhi kriteria tersebut ke dalam list subscribedUsers
-      // >>> Tulis kode for loop di sini
+      for (var user in users) {
+        if (user["isSubscribed"] == true &&
+            user["isVerified"] == true &&
+            user["gender"] == "Female" &&
+            user["age"] > 25 &&
+            (user["city"] == "Los Angeles" || user["city"] == "New York")) {
+          subscribedUsers.add(user);
+        }
+      }
 
-      // --- End of Answer ---
       return subscribedUsers.isNotEmpty && subscribedUsers.first["id"] == 4;
     },
 
@@ -6872,10 +6914,14 @@ class TechnicalTest {
 
       // Instruksi: Gunakan looping for untuk mencari product yang merupakan produk unggulan (isFeatured = true),
       // memiliki rating di atas 4.5, tersedia (isAvailable = true), dan memiliki lebih dari 100 ulasan (reviews > 100)
-      // Masukkan product yang memenuhi kriteria tersebut ke dalam list featuredProducts
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (var product in products) {
+        if (product["isFeatured"] == true &&
+            product["rating"] > 4.5 &&
+            product["isAvailable"] == true &&
+            product["reviews"] > 100) {
+          featuredProducts.add(product);
+        }
+      }
 
       return featuredProducts.length == 2 &&
           featuredProducts[0]["name"] == "Headphones" &&
@@ -6939,10 +6985,15 @@ class TechnicalTest {
       // Instruksi: Gunakan looping for untuk mencari karyawan dengan gaji tinggi (salary > 5000),
       // berusia di atas 25 tahun, memiliki pengalaman kerja lebih dari 3 tahun (yearsOfExperience > 3),
       // dan bekerja di departemen "IT" atau "Finance"
-      // Masukkan karyawan yang memenuhi kriteria tersebut ke dalam list highPaidEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (var employee in employees) {
+        if (employee["salary"] > 5000 &&
+            employee["age"] > 25 &&
+            employee["yearsOfExperience"] > 3 &&
+            (employee["department"] == "IT" ||
+                employee["department"] == "Finance")) {
+          highPaidEmployees.add(employee);
+        }
+      }
 
       return highPaidEmployees.isNotEmpty && highPaidEmployees.first["id"] == 4;
     },
@@ -7004,10 +7055,13 @@ class TechnicalTest {
       // Instruksi: Gunakan looping for untuk mencari karyawan dengan status paruh waktu (isFullTime = false),
       // tidak memiliki asuransi kesehatan (hasHealthInsurance = false),
       // dan berusia di bawah 25 tahun (age < 25)
-      // Masukkan karyawan yang memenuhi kriteria tersebut ke dalam list partTimeEmployees
-      // >>> Tulis kode for loop di sini
-
-      // --- End of Answer ---
+      for (var employee in employees) {
+        if (employee["isFullTime"] == false &&
+            employee["hasHealthInsurance"] == false &&
+            employee["age"] < 25) {
+          partTimeEmployees.add(employee);
+        }
+      }
 
       return partTimeEmployees.isNotEmpty && partTimeEmployees.first["id"] == 4;
     },
